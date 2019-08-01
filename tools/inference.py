@@ -113,7 +113,7 @@ def main():
     
     start = timeit.default_timer()
     if 'val' in config.DATASET.TEST_SET:
-        mean_IoU, IoU_array, pixel_acc, mean_acc = testval(config, 
+        mean_IoU, IoU_array, pixel_acc, mean_acc = test(config, 
                                                            test_dataset, 
                                                            testloader, 
                                                            model,
