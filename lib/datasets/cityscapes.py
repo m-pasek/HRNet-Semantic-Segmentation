@@ -195,8 +195,8 @@ class Cityscapes(BaseDataset):
         preds = preds.cpu().numpy().copy()
         preds = np.asarray(np.argmax(preds, axis=1), dtype=np.uint8)
         for i in range(preds.shape[0]):
-            # pred = self.convert_label(preds[i], inverse=True)
-            pred = preds[i]
+            pred = self.convert_label(preds[i], inverse=True)
+            # pred = preds[i]
             save_img = Image.fromarray(pred)
             # save_img.putpalette(palette)
             save_img.save(os.path.join(sv_path, name[i]+'.png'))
